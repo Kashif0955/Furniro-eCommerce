@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 // Your JSON Data
 const data = [
@@ -116,6 +117,8 @@ function ProductCard({ id, imageUrl, title, description, price, otherPrice, type
       ? "bg-green-300" // Green for new
       : "bg-gray-300"; // Default gray for normal
 
+      const navigate = useNavigate();
+
   return (
     <motion.div
       initial="initial"
@@ -156,13 +159,13 @@ function ProductCard({ id, imageUrl, title, description, price, otherPrice, type
           <div className="flex justify-center">
             <button
               onClick={() => {
-                console.log(`View product with ID: ${id}`);
+                navigate(`/product-details/${id}`); // Use navigate here
               }}
-              className="bg-white text-[#BE9740] font-bold py-2 px-4 hover:bg-gray "             >
+              className="bg-white text-[#BE9740] font-bold py-2 px-4 hover:bg-gray "
+            >
               View product
             </button>
           </div>
-
           {/* Icons Section (Share & Like) */}
           <div className="flex justify-center gap-5 mt-[24px]">
             {icons.map((icon, index) => (

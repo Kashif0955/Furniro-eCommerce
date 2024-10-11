@@ -47,7 +47,7 @@ function Header() {
               <a
                 key={index}
                 href={link.link}
-                className="text-black hover:text-[#B88E2F]" // Default black, hover color is #B88E2F
+                className="text-black hover:text-[#B88E2F] font-bold text-[16px]" // Updated font size and bold
               >
                 {link.title}
               </a>
@@ -93,7 +93,7 @@ function Header() {
               <a
                 key={index}
                 href={link.link}
-                className="text-black hover:text-[#B88E2F]" // Default black, hover color is #B88E2F
+                className="text-black hover:text-[#B88E2F] font-bold text-[16px]" // Updated font size and bold for mobile
               >
                 {link.title}
               </a>
